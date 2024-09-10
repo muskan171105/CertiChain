@@ -80,6 +80,7 @@ contract CertificateRegistry {
         return certificates[certificateId];
     }
 }
+```
 ## File Structure
 
 ```bash
