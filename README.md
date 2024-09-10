@@ -93,3 +93,8 @@ blockchain-certification-platform/
 ├── README.md          # Project documentation
 ├── .gitignore         # Files to ignore in the repository
 └── package.json       # Dependencies and scripts for the frontend
+```
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
