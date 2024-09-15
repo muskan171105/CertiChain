@@ -52,35 +52,6 @@ The smart contracts are written in Solidity and include functionality for:
 - **Verifying Certificates**: Retrieving certificate details using the certificate ID.
 - **Revoking Certificates**: Allowing institutions to revoke a certificate if necessary.
 
-```solidity
-pragma solidity ^0.8.0;
-
-contract CertificateRegistry {
-    struct Certificate {
-        string studentName;
-        string institution;
-        string course;
-        string ipfsHash;
-        uint256 issueDate;
-    }
-
-    mapping(bytes32 => Certificate) public certificates;
-
-    function issueCertificate(
-        string memory studentName, 
-        string memory institution, 
-        string memory course, 
-        string memory ipfsHash
-    ) public {
-        bytes32 certificateId = keccak256(abi.encodePacked(studentName, institution, course));
-        certificates[certificateId] = Certificate(studentName, institution, course, ipfsHash, block.timestamp);
-    }
-
-    function verifyCertificate(bytes32 certificateId) public view returns (Certificate memory) {
-        return certificates[certificateId];
-    }
-}
-```
 ## File Structure
 
 ```bash
